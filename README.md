@@ -1,4 +1,4 @@
-# git-tray-notifier
+# GitTrayNotifier
 
 Windows system tray app that polls git repositories and notifies you when upstream branches have updates.
 
