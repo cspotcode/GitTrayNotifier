@@ -1,0 +1,12 @@
+bin
+obj
+
+*.lscache
+
+# User-specific files
+*.user
+*.suo
+.vs/
+
+# NuGet
+*.nupkg

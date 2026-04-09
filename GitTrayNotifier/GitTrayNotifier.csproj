@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationIcon>../Icons/app.ico</ApplicationIcon>
+
+    <!--
+        Disabled because these create big .exe: 130MB compared to ~1MB
+        To see all that gets bundled, use ILSpy
+    -->
+    <!-- Packs everything into single .exe -->
+    <!-- <PublishSingleFile>true</PublishSingleFile> -->
+    <!-- Bundles the dotnet runtime -->
+    <!-- <SelfContained>true</SelfContained> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\config.schema.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Always" Link="config.schema.json" />
+    <EmbeddedResource Include="../Icons/app.ico" />
+  </ItemGroup>
+
+</Project>

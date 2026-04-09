@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GitTrayNotifier Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "pollingInterval": {
+      "description": "How often to check repositories for updates. Examples: '1h', '30m', '1d'.",
+      "type": "string",
+      "pattern": "^[0-9]+(m|h|d)$",
+      "default": "1h"
+    },
+    "repositories": {
+      "description": "List of git repositories to monitor.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Repository"
+      },
+      "default": []
+    }
+  },
+  "$defs": {
+    "Repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "branch"],
+      "properties": {
+        "type": {
+          "description": "Whether the repository lives in Windows or inside a WSL2 distro.",
+          "type": "string",
+          "enum": ["windows", "wsl2"],
+          "default": "windows"
+        },
+        "path": {
+          "description": "Absolute path to the repository root.",
+          "type": "string"
+        },
+        "branch": {
+          "description": "Local branch to monitor (e.g. 'main').",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
