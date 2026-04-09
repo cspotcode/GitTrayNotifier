@@ -24,4 +24,10 @@
     <EmbeddedResource Include="../Icons/app.ico" />
   </ItemGroup>
 
+  <Target Name="ZipPublish" AfterTargets="Publish">
+    <ZipDirectory Overwrite="true"
+                  SourceDirectory="$(PublishDir)"
+                  DestinationFile="$(PublishDir)../GitTrayNotifier.zip" />
+  </Target>
+
 </Project>
