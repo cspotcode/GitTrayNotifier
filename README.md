@@ -7,7 +7,7 @@ This is useful when you keep personal tooling - scripts, dotfiles - in git acros
 Supports both Windows and WSL2 repos, skipping WSL2 checks if your default distro isn't running to avoid waking the VM.
 
 > [!NOTE]  
-> Code was written wth AI assistance and minimal review. I couldn't justify spending more time on this.
+> Code was written with AI assistance and minimal review. I couldn't justify spending more time on this.
 
 ## Installation
 
