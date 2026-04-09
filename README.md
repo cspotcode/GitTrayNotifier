@@ -35,6 +35,7 @@ Config file path is stored in the Windows registry and defaults to `%AppData%/.G
 ## How it works
 
 It runs `git ls-remote` to get the remote branch commit.
+
 It runs `git rev-parse` to get the local branch commit.
 
 If they differ, it fires a notification.
